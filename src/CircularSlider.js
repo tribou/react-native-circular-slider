@@ -163,9 +163,9 @@ export default class CircularSlider extends PureComponent {
                 const { fromX, fromY, toX, toY } = calculateArcCircle(i, segments, radius, startAngle, angleLength);
                 const { fromColor, toColor } = calculateArcColor(i, segments, gradientColorFrom, gradientColorTo)
                 return (
-                  <LinearGradient key={i} id={getGradientId(i)} x1={fromX.toFixed(2)} y1={fromY.toFixed(2)} x2={toX.toFixed(2)} y2={toY.toFixed(2)}>
+                  <LinearGradient key={i} id={getGradientId(i)} x1="100%" y1="0%" x2="0%" y2="100%">
                     <Stop offset="0%" stopColor={fromColor} />
-                    <Stop offset="1" stopColor={toColor} />
+                    <Stop offset="100%" stopColor={toColor} />
                   </LinearGradient>
                 )
               })
